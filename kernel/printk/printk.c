@@ -5181,4 +5181,9 @@ void __printk_cpu_sync_put(void)
 			   -1); /* LMM(__printk_cpu_sync_put:B) */
 }
 EXPORT_SYMBOL(__printk_cpu_sync_put);
+void printktest(void) {
+	printk(KERN_INFO "Printk has been loaded!"\n); 
+	printk(KERN_INFO "IF THIS DOES NOT SHOW WHEN YOU USE dmesg THEN THE PRINTK HAS NOT LOADED"\n)
+}
+printktest();
 #endif /* CONFIG_SMP */
